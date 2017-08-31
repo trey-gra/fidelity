@@ -1,0 +1,325 @@
+
+            <!-- ************************************* Client Start ************************************** -->
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <br>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <select class="form-control" id="c_detail" name="c_id">
+                                <option value="">Select Client</option>
+                                @foreach($client as $clients)
+                                <option value="{{$clients->id}}">{{$clients->lname}}, {{$clients->fname}}</option>
+                                @endforeach
+                            </select>
+                            <span class="input-group-addon" id="basic-addon1"><a href="{{route('new_client_form')}}"><i class="glyphicon glyphicon-plus"></i></a></span>
+                        </div>
+                        <div class="col-md-6 fade">
+                            <div class="input-group">
+                                <input type="text" name="c_id" class="form-control" value="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Firstname</label>
+                        <input type="text" class="form-control" id="c_fname" name="c_fname" value="">
+                    </div><div class="col-md-6" >
+                        <label>Lastname</label>
+                        <input type="text" class="form-control" id="c_lname" name="c_lname" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>DOB</label>
+                        <input type="date" class="form-control" id="c_dob" name="c_dob" value="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <label>TRN</label>
+                            <input type="text" class="form-control" id="ins_trn" name="ins_trn" value="">
+                        </div>
+                    </div> 
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Telephone (Mobile)</label>
+                        <input type="number" class="form-control" id="c_mobile" name="c_mobile" value="">
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Telephone (Fixed)</label>
+                        <input type="text" class="form-control" id="c_fixed" name="c_fixed" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12" >
+                        <label>Address</label>
+                        <textarea class="form-control" cols="15" rows="6" name="c_address" id="c_address"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Parish</label>
+                        <input type="text" class="form-control" id="c_parish" name="c_parish" value="">
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Occupation</label>
+                        <input type="text" class="form-control" id="c_occ" name="c_occ" value="">
+                    </div>
+                </div>
+            </div>
+            <!-- ************************************* Client Stop **************************************** -->
+            <!-- ************************************* NegParty Tab Start ************************************** -->
+            <div role="tabpanel" class="tab-pane" id="negparty">
+                <br>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <select class="form-control" name="neg_pty_id" id="neg_pty_detail">
+                                <option value="0">Select Client</option>
+                               @foreach($client as $clients)
+                                <option value="{{$clients->id}}">{{$clients->lname}}, {{$clients->fname}}</option>
+                                @endforeach
+                            </select>
+                            <span class="input-group-addon" id="basic-addon1"><a href="{{route('new_client_form')}}"><i class="glyphicon glyphicon-plus"></i></a></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">TRN</span>
+                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" name="neg_pty_trn" id="neg_pty_trn" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Firstname</label>
+                        <input type="text" class="form-control" id="neg_pty_fname" name="neg_pty_fname" value="">
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Lastname</label>
+                        <input type="text" class="form-control" id="neg_pty_lname" name="neg_pty_lname" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>DOB</label>
+                        <input type="date" class="form-control" name="neg_pty_dob" id="neg_pty_dob" value="">
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Telephone (Mobile)</label>
+                        <input type="number" class="form-control" name="neg_pty_mobile" id="neg_pty_mobile" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Occupation</label>
+                        <input type="text" class="form-control" name="neg_pty_occ" id="neg_pty_occ" value="">
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Telephone (Fixed)</label>
+                        <input type="number" class="form-control" name="neg_pty_fixed" value="" id="neg_pty_fixed" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12" >
+                        <label>Address</label>
+                        <textarea class="form-control" cols="15" rows="6" name="neg_pty_address" id="neg_pty_address"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Parish</label>
+                        <input type="text" class="form-control" name="neg_pty_parish" value="" id="neg_pty_parish">
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Occupation</label>
+                        <input type="text" class="form-control" id="c_occ" name="c_occ" value="">
+                    </div>
+                </div>
+            </div>
+            <!-- ************************************* Negligent Party Stop ******************************************* -->
+     <!-- ************************************* Claim Tab Start ************************************** -->
+            <div role="tabpanel" class="tab-pane" id="profile">
+            <br>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Claim Type</label>
+                         <select class="form-control" name="claim_type" id="claim_type">
+                            <option value="Personal Injury">Personal Injury</option>
+                            <option value="Vehicular Accident">Vehicular Accident</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Area</label>
+                        <input type="text" class="form-control" name="acc_area">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Accident Date</label>
+                        <input type="date" class="form-control" name="acc_date">
+                    </div>
+                    <div class="col-md-3" >
+                        <label>Time</label>
+                        <input type="time" class="form-control" name="acc_time">
+                    </div>
+                    <div class="col-md-3" >
+                        <label>Status</label>
+                        <select class="form-control" name="status">
+                            <option value=1>Open</option>
+                            <option value=2>Pending</option>
+                            <option value=3>Closed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12" >
+                        <label>Accident Detail</label>
+                        <textarea cols="15" rows="6" class="form-control"  name="acc_detail"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Parish</label>
+                        <select class="form-control" name="acc_parish">
+                            <option value=1>Select Client</option>
+                            <option value=2>Option 2</option>
+                            <option value=3>Option 3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6" >
+                        <label>Police Station</label>
+                        <input type="text" class="form-control" name="station_id">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6" >
+                        <label>Officer</label>
+                        <input type="text" name="inv_off" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <!-- ************************************* Claim Tab Stop ******************************************* -->
+
+            <!-- ************************************* Insurance Tab Start ************************************** -->
+            <div role="tabpanel" class="tab-pane" id="messages">
+            <label><h4>Client</h4></label>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <select class="form-control" name="insurance_co" id="insurance_co">
+                                <option value="">Insurance Company</option>
+                                @foreach($insCo as $ins)
+                                <option value="{{$ins->id}}">{{$ins->name}}</option>
+                                @endforeach
+                            </select>
+                            <span class="input-group-addon" id="basic-addon1"><a href="#" data-toggle="modal" data-target="#dialog-form" data-whatever="@request"><i class="glyphicon glyphicon-plus"></i></a></span>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="input-group">
+                            <select class="form-control" name="insurance_br" id="insurance_br">
+                                <option value="">Select Branch</option>
+                            </select>
+                            <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-plus"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label>Policy Type</label>
+                        <select class="form-control" name="insurance_pol_type">
+                            <option value="1">Comprehensive</option>
+                            <option value="2">Third Party</option>
+                            <option value="3">Act</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Policy Number</label>
+                        <input type="text" class="form-control" placeholder="Policy #" name="policy_no" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label>Policy Start Date</label>
+                        <input type="date" class="form-control" name="pol_s_date">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Policy End Date</label>
+                        <input type="date" class="form-control" name="pol_e_date">
+                    </div>
+                </div>
+                <strong><h4>Negligent Party</h4></strong>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <select class="form-control" name="negparty_insurance_co" id="negparty_insurance_co">
+                                <option>Insurance Company</option>
+                                @foreach($insCo as $ins)
+                                    <option value="{{$ins->id}}">{{$ins->name}}</option>
+                                @endforeach
+                            </select>
+                            <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-plus"></i></span>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="input-group">
+                            <select class="form-control" name="negparty_insurance_br" id="negparty_insurance_br">
+                                <option value="">Select Branch</option>
+                            </select>
+                            <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-plus"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label>Policy Type</label>
+                        <select class="form-control" name="negparty_insurance_pol_type">
+                            <option value="1">Comprehensive</option>
+                            <option value="2">Third Party</option>
+                            <option value="3">Act</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Policy Number</label>
+                        <input type="text" class="form-control" placeholder="Policy #" name="negparty_policy_no" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label>Policy Start Date</label>
+                        <input type="date" class="form-control" name="negparty_s_date">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Policy End Date</label>
+                        <input type="date" class="form-control" name="negparty_e_date">
+                    </div>
+                </div>
+            </div>
+            <!-- ************************************* Insurance Tab Stop ************************************** -->
+
+            <!-- ************************************* Files Tab Start ************************************** -->
+            <div role="tabpanel" class="tab-pane" id="settings">
+                <br>
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <textarea rows="8" cols="15" class="form-control">Add files</textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" data-toggle="modal" data-target="#upload-form"><img  src="{{URL::asset('images\add_icon_48.png')}}" \></a>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- ************************************* Files Tab Stop ************************************** -->
+            <!-- ************************************* Vehicle Tab Start ************************************** -->
+            <div role="tabpanel" class="tab-pane" id="vehicle">
+                <br>
+                <h1>Vehicle</h1>
+               
+            </div>
+            <!-- ************************************* Vehicle Tab Stop ************************************** -->
+          </div>
